@@ -94,21 +94,28 @@
     /* Scroll Snap */
     scroll-snap-align: center;
   }
-  
-  section h1 {
-    font-size: 7rem;
-    position: relative;
-    left: 180px;
-    text-shadow: 3px 3px #c4bdbd
+
+  /* home */
+
+  .about_title {
+    font-size: 3em;
   }
-  
+
+  .about_heading {
+    font-size: 3rem;
+    padding: 20px 0;
+  }
+
   /* Section Images */
   section#home {
-    background: url('../images/esports_background.png') no-repeat center center/cover;;
+    background: linear-gradient(
+    105deg, 
+    var(--clr-primary) 60%, 
+    var(--clr-secondary) 60%);
   }
   
   section#about {
-    /* background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;; */
+    background: var(--clr-primary);
   }
   
   section#games {
@@ -116,19 +123,42 @@
   }
   
   section#participate {
-    /* background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;; */
+    background: var(--clr-primary);
+  }
+
+  .home_contain {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .home_head {
+    font-size: 10vh;
+    margin-top: 300px;
+    text-shadow: 3px 3px #c4bdbd
+  }
+
+  .home_contain img {
+    width: 50vw;
+    margin-top: 50px;
+  }
+
+  /* mobile btn for games */
+  .mob-btn {
+    visibility: hidden;
   }
 
   /* card */
   .card{
     color: var(--clr-primary);
-    background-image: url('../images/valorant_sample.jpg');
+    background-image: url('../images/final/val_card.png');
     background-size: cover;
     padding: 10rem 0 0;
-    max-width: 35ch;
+    /* max-width: 35ch; */
+    max-width: 40ch;
     border-radius: .5rem;
     overflow: hidden;
     transition: transform 500ms ease;
+    margin: 0 30px;
   }
 
   .card p, h2 {
@@ -153,7 +183,7 @@
 
   @media (hover) {
     .card-content {
-      transform: translateY(65%);
+      transform: translateY(60%);
       transition: transform 500ms ease;
     }
     .card:hover .card-content,
@@ -180,7 +210,7 @@
     }
     .card-title::after {
       transform: scaleX(0);
-    }
+    }  
   }
 
   .card-title {
@@ -217,8 +247,151 @@
     border-radius: .25em;
   }
   
+  .btn-nav {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: var(--clr-primary);
+    background-color: #17FCB8;
+    padding: 0.5em 1.25em;
+    border-radius: .25em;
+  }
+
   .card-body {
     color: rgb(255, 255, 255 / 0.85)
   }
 
+  .contain {
+    display: flex;
+    flex-direction: row;
+  }  
 
+  /* about page */
+  video {
+    width: 60vw;
+  }
+
+  /* responsiveness */
+  /* @media only screen and (max-width: 800px) {
+    .home_title {
+      left: 0;
+    }
+  } */
+
+  .btn_register {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    color: var(--clr-primary);
+    background-color: #17FCB8;
+    padding: 0.5em 1.25em;
+    border-radius: .25em;
+  }
+
+  .p_text {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  .p_para {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+
+  }
+
+  .p_para a {
+    color: #41dcb3;
+  }
+
+  @media only screen and (max-width: 1230px) {
+    .home_contain {
+      display: flex;
+      flex-direction: column;
+    }
+    .home_head {
+      margin-top: 0;
+      padding: 0;
+      text-align: center;
+      font-size: 8vh;
+      position: relative;
+      bottom: 80px;
+    }
+    .image_home img {
+      margin-top: 100px;
+      width: 85vh;
+    }
+    .season {
+      display: none;
+    }
+    video {
+      width: 100vh;
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .contain {
+      display: flex;
+      flex-direction: column;
+    }  
+    .card{
+      max-width: 25ch;
+      height: 15ch;
+    }
+    .card-content p, a, .button{
+      display: none;
+    }
+    .card-title {
+      position: relative;
+      top: 40px;
+    }
+    .mob-btn {
+      visibility: visible
+    }
+    video {
+      width: 80vh;
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    .image_home img {
+      margin-top: 100px;
+      width: 60vh;
+    }
+    .navbar ul li a {
+      font-size: 1rem;
+    }
+    .navbar ul li {
+      padding: 1rem 0.25rem;
+    }
+    video {
+      width: 55vh;
+    }
+  }
+
+  @media only screen and (max-width: 420px) {
+    .image_home img {
+      margin-top: 100px;
+      width: 60vh;
+    }
+    .home_head {
+      font-size: 6vh;
+      margin-top: 10px;
+    }
+    video {
+      width: 45vh;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .image_home img {
+      margin-top: 100px;
+      width: 50vh;
+    }
+    .navbar ul li {
+      padding: 1rem 0rem;
+    }
+    /* .home_head {
+      font-size: 6vh;
+      margin-top: 10px;
+    } */
+  }
