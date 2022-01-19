@@ -183,7 +183,7 @@
 
   @media (hover) {
     .card-content {
-      transform: translateY(60%);
+      transform: translateY(55%);
       transition: transform 500ms ease;
     }
     .card:hover .card-content,
