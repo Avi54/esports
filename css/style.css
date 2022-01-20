@@ -15,6 +15,7 @@
     height: 100vh;
     line-height: 1.6;
     overflow: hidden;
+    overflow-x: hidden;
   }
   
   .container {
@@ -291,6 +292,7 @@
   .p_text {
     font-size: 5rem;
     text-align: center;
+    margin-top: 30px;
   }
 
   .p_para {
@@ -301,6 +303,10 @@
 
   .p_para a {
     color: #41dcb3;
+  }
+
+  .participate-contain {
+    display: flex;
   }
 
   @media only screen and (max-width: 1230px) {
@@ -319,6 +325,7 @@
     .image_home img {
       margin-top: 100px;
       width: 85vh;
+      overflow: hidden;
     }
     .season {
       display: none;
@@ -337,7 +344,7 @@
       max-width: 25ch;
       height: 15ch;
     }
-    .card-content p, a, .button{
+    .card-content p, .button{
       display: none;
     }
     .card-title {
@@ -355,7 +362,8 @@
   @media only screen and (max-width: 580px) {
     .image_home img {
       margin-top: 100px;
-      width: 60vh;
+      width: 50vh;
+      overflow: hidden;
     }
     .navbar ul li a {
       font-size: 1rem;
@@ -366,15 +374,37 @@
     video {
       width: 55vh;
     }
-  }
-
-  @media only screen and (max-width: 420px) {
-    .image_home img {
-      margin-top: 100px;
-      width: 60vh;
+    .p_text {
+      font-size: 3rem;
+      text-align: center;
+    }
+    .p_para {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .participate-contain {
+      flex-direction: column;
+    }
+    .participate-contain a{
+      margin-top: 10px;
+    }
+    .about_heading {
+      font-size: 2rem;
+      padding: 20px 0;
     }
     .home_head {
-      font-size: 6vh;
+      font-size: 3.5rem;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    .image_home img {
+      margin-top: 100px;
+      width: 50vh;
+      overflow: hidden;
+    }
+    .home_head {
+      font-size: 2.5rem;
       margin-top: 10px;
     }
     video {
@@ -385,10 +415,15 @@
   @media only screen and (max-width: 350px) {
     .image_home img {
       margin-top: 100px;
-      width: 50vh;
+      width: 42vh;
+      overflow: hidden;
     }
     .navbar ul li {
       padding: 1rem 0rem;
+    }
+    .home_head {
+      font-size: 2rem;
+      margin-top: 40px;
     }
     /* .home_head {
       font-size: 6vh;
