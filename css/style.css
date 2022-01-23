@@ -330,9 +330,7 @@
     .season {
       display: none;
     }
-    video {
-      width: 100vh;
-    }
+
   }
 
   @media only screen and (max-width: 700px) {
@@ -354,9 +352,7 @@
     .mob-btn {
       visibility: visible
     }
-    video {
-      width: 80vh;
-    }
+
   }
 
   @media only screen and (max-width: 580px) {
@@ -370,9 +366,6 @@
     }
     .navbar ul li {
       padding: 1rem 0.25rem;
-    }
-    video {
-      width: 55vh;
     }
     .p_text {
       font-size: 3rem;
@@ -407,9 +400,7 @@
       font-size: 2.5rem;
       margin-top: 10px;
     }
-    video {
-      width: 45vh;
-    }
+
   }
 
   @media only screen and (max-width: 350px) {
